@@ -21,7 +21,7 @@ jobs:
     - name: Setup .NET 5
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.301
+        dotnet-version: 5.0.101
 
     - name: Acessar diretório da aplicação
       run: cd ./PrintEnvironmentVariables
