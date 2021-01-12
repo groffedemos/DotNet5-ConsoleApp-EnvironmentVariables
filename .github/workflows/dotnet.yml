@@ -27,6 +27,8 @@ jobs:
         dotnet-version: 5.0.101
       
     - name: Executar testes
+      env:
+        CONTEUDO_MENSAGEM: ${{ secrets.MENSAGEM }}
       run: |
         cd ${{ env.DIRETORIO_APLICACAO }}
-        dotnet run "NOME|SOBRENOME|DIRETORIO_APLICACAO|MENSAGEM"
+        dotnet run "NOME|SOBRENOME|CONTEUDO_MENSAGEM|DIRETORIO_APLICACAO"
