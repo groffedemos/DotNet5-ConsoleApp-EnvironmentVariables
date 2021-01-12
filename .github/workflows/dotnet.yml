@@ -25,11 +25,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.101
-
-    - name: Acessar diretório da aplicação
-      run: cd ./PrintEnvironmentVariables
       
     - name: Executar testes
       run: |
         cd ${{ env.DIRETORIO_APLICACAO }}
-        dotnet run "NOME|SOBRENOME|DIRETORIO_APLICACAO"
+        dotnet run "NOME|SOBRENOME|DIRETORIO_APLICACAO|MENSAGEM"
