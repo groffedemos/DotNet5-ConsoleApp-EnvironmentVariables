@@ -22,6 +22,8 @@ jobs:
     - uses: actions/checkout@v2
       
     - name: Setup .NET 5
+      env:
+        Teste_Action: Olá mundo!
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.101
@@ -29,6 +31,7 @@ jobs:
     - name: Executar testes
       env:
         CONTEUDO_MENSAGEM: ${{ secrets.MENSAGEM }}
+        Master_Class: Boa tarde a todos!
       run: |
         cd ${{ env.DIRETORIO_APLICACAO }}
-        dotnet run "NOME|SOBRENOME|CONTEUDO_MENSAGEM|DIRETORIO_APLICACAO"
+        dotnet run "NOME|SOBRENOME|Teste_Action|Master_Class|CONTEUDO_MENSAGEM|DIRETORIO_APLICACAO"
