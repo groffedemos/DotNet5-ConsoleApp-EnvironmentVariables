@@ -15,6 +15,7 @@ jobs:
     env:
       NOME: Renato
       SOBRENOME: Groffe
+      LOCAL: em casa
 
     runs-on: ubuntu-latest
 
@@ -34,4 +35,4 @@ jobs:
         Master_Class: Boa tarde a todos!
       run: |
         cd ${{ env.DIRETORIO_APLICACAO }}
-        dotnet run "NOME|SOBRENOME|Teste_Action|Master_Class|CONTEUDO_MENSAGEM|DIRETORIO_APLICACAO"
+        dotnet run "NOME|SOBRENOME|LOCAL|Teste_Action|Master_Class|CONTEUDO_MENSAGEM|DIRETORIO_APLICACAO"
